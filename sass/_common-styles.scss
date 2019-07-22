@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.625rem;
+  font-family: "Raleway", arial, sans-serif;
+}
+
+.main-section {
+  @include handlePositionLeft(relative, 10vh, 0);
+}
+
+.separating-line {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    margin: 10px;
+    position: relative;
+    font-size: 1.3rem;
+  }
+}

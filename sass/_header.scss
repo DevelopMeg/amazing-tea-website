@@ -1,0 +1,138 @@
+/*! HEADER */
+.head {
+  @include handleFlex(column, space-around, center);
+  flex-wrap: wrap;
+  @include handlePositionLeft(relative, 10vh, 0);
+  height: 90vh;
+}
+
+.head-logo {
+  @include handleFlex(row, flex-start, center);
+  @include handlePositionLeft(fixed, 0, 0);
+  @include handleSize(67%, 10vh);
+  z-index: 2;
+  border: 2px solid #000;
+  background-color: rgba(137, 189, 88, 0.89);
+
+  &__title {
+    flex-basis: 70%;
+    margin-left: 5px;
+    font-size: 2rem;
+    @include handleTextProperty(500, right);
+  }
+}
+
+.box-logo-image {
+  flex-basis: 15%;
+  margin-left: 15px;
+  @include handlePositionLeft(relative, -3px, 0);
+
+  &__src {
+    width: 26px;
+  }
+}
+
+.head-burger-menu {
+  z-index: 2;
+  @include handlePositionRight(fixed, 0, 0);
+  border: 2px solid #000;
+  border-left: none;
+  @include handleSize(33%, 10vh);
+  background-color: rgba(153, 153, 153, 0.89);
+
+  &__icon {
+    display: block;
+    @include handleCenteringItems();
+    font-size: 3rem;
+  }
+}
+
+.head-menu {
+  @include handlePositionRight(fixed, 10vh, 0);
+  width: 100%;
+  opacity: 0;
+  transition: 0.2s;
+
+  &.on {
+    /*! leave nav/menu */
+    z-index: 1;
+    opacity: 1;
+  }
+}
+
+.navbar {
+  @include handleFlexShort(row);
+  list-style: none;
+  margin: 4px auto;
+  width: 98%;
+
+  &__item {
+    @include handlePositionLeft(relative, 0, 0);
+    flex-basis: 33.4%;
+    border: 2px solid #000;
+    height: 8vh;
+    background-color: $delicateMint;
+
+    &--about-us {
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    @include handleCenteringItems();
+    width: 100%;
+    color: #000;
+    font-size: 1.3rem;
+    text-decoration: none;
+    @include handleTextProperty(600, center);
+  }
+}
+
+.main-sentence {
+  flex-basis: 30vh;
+  @include handlePositionLeft(relative, 0, 0);
+  width: 100%;
+
+  &__title {
+    @include handleCenteringItems();
+    width: 70%;
+    font-size: 2.5rem;
+    line-height: 35px;
+    font-family: $fontMainTitle;
+    text-align: center;
+    font-weight: 700;
+
+    &--span {
+      padding: 2px;
+      font-size: 2.8rem;
+      color: #73a741;
+    }
+  }
+}
+
+.main-image {
+  flex-basis: 35vh;
+  width: 100%;
+
+  &__src {
+    display: block;
+    border: 1px solid #000;
+    margin: 0 auto;
+    @include handleSize(85%, 30vh);
+  }
+}
+
+.main-citation {
+  flex-basis: 25vh;
+  width: 100%;
+
+  &__text {
+    @include handleCenteringY();
+    font-size: 2.4rem;
+    font-family: $fontMainTitle;
+    font-weight: 700;
+    text-align: center;
+  }
+}

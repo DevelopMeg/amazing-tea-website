@@ -1,0 +1,68 @@
+/*! SECTION CHOOSE TEA */
+
+.section-choose-tea {
+  &__title {
+    margin: 15px;
+    @include titleSection();
+    @include handleTextProperty(500, center);
+    &--span {
+      transition: 0.8s;
+    }
+  }
+}
+
+.select-tea {
+  @include handleFlexShort(row);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px auto;
+  @include handleSize(90%, 45vh);
+
+  &__item {
+    flex-basis: 43%;
+    @include handlePositionLeft(relative, 0, 0);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 100px;
+
+    &--black-tea {
+      background-color: #0000002e;
+    }
+
+    &--green-tea {
+      background-color: #cddebdad;
+    }
+
+    &--red-tea {
+      background-color: #e6b8aecc;
+    }
+
+    &--white-tea {
+      background-color: #e6e5bd4a;
+    }
+  }
+
+  &__name {
+    @include handleCenteringItems();
+    width: 100%;
+    @include clickItem();
+    @include handleTextProperty(600, center);
+  }
+
+  &__leaf {
+    display: block;
+    padding-top: 8px;
+
+    &--green-tea {
+      color: #335f0d;
+    }
+
+    &--red-tea {
+      color: #842a0f;
+    }
+
+    &--white-tea {
+      color: #af9d5d;
+    }
+  }
+}

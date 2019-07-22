@@ -1,0 +1,17 @@
+/*! FOOTER */
+
+.copyright {
+  border-top: 2px solid #000;
+  padding: 10px;
+  @include handlePositionLeft(relative, 10vh, 0);
+  background-color: $darkGray;
+
+  &__text {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 16px;
+  }
+  &__link {
+    color: #000;
+  }
+}

@@ -1,0 +1,195 @@
+/*! ARTICLE CHOOSE TEA */
+
+.box-choose-tea {
+  border-top: 2px dashed #000;
+
+  &--white-tea {
+    border-bottom: 2px dashed #000;
+  }
+
+  &__title {
+    margin: 25px 20px 20px 20px;
+    @include titleSection();
+    @include handleTextProperty(500, center);
+    letter-spacing: 1px;
+  }
+}
+
+.look-choose-tea {
+  &__image {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+.read-choose-tea {
+  &__text {
+    margin: 20px auto;
+    width: 80%;
+    text-align: justify;
+    @include text();
+    line-height: 26px;
+  }
+}
+
+.taste-tea {
+  @include handleFlex(row, space-around, space-around);
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  height: 45vh;
+  background-color: #fff;
+
+  &__title {
+    flex-basis: 100%;
+    margin: 12px auto 22px auto;
+    @include subtitle();
+    @include handleTextProperty(600, center);
+    letter-spacing: 1px;
+  }
+}
+
+.box-select-taste-tea {
+  flex-basis: 90%;
+  @include handleFlex(row, space-around, space-around);
+  flex-wrap: wrap;
+  height: 33vh;
+}
+
+.select-taste-tea {
+  flex-basis: 28%;
+  border: 2px solid #000;
+  border-radius: 30px;
+  padding: 5px;
+  @include handlePositionLeft(relative, 0, 0);
+  height: 13vh;
+  text-align: center;
+
+  &--black-tea {
+    box-shadow: $sizeBoxShadow #000;
+  }
+
+  &--green-tea {
+    box-shadow: $sizeBoxShadow #7a9661;
+  }
+
+  &--red-tea {
+    box-shadow: $sizeBoxShadow #bb5e63;
+  }
+
+  &--white-tea {
+    box-shadow: $sizeBoxShadow #d8ba74;
+  }
+
+  &__image {
+    @include handleCenteringItems();
+  }
+}
+
+.order-choose-tea {
+  &__btn {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #000;
+    padding: 8px 60px;
+    @include clickItem();
+    line-height: 19px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &--black-tea {
+      background-color: $gray;
+    }
+
+    &--green-tea {
+      background-color: $lightGreen;
+    }
+
+    &--red-tea {
+      background-color: $rose;
+    }
+
+    &--white-tea {
+      background-color: $sunny;
+    }
+  }
+}
+
+.price-teas {
+  margin-bottom: 25px;
+
+  &__title {
+    margin: 20px;
+    padding: 10px;
+    @include subtitle();
+    @include handleTextProperty(600, center);
+    letter-spacing: 1px;
+
+    &--black-tea {
+      background-color: rgba(220, 213, 213, 0.53);
+    }
+
+    &--green-tea {
+      background-color: rgba(217, 234, 200, 0.53);
+    }
+
+    &--red-tea {
+      background-color: rgba(253, 208, 200, 0.53);
+    }
+
+    &--white-tea {
+      background-color: rgba(251, 223, 155, 0.53);
+    }
+  }
+
+  &__arrow {
+    margin: 0 5px;
+    font-size: 1.7rem;
+  }
+}
+
+.price-list {
+  &__box {
+    @include handleFlexShort(row);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px auto 10px auto;
+    padding: 10px;
+    width: 70%;
+    text-align: center;
+
+    &--white-tea {
+      background-color: rgba(253, 237, 200, 0.42);
+    }
+
+    &--red-tea {
+      background-color: rgba(249, 238, 236, 0.84);
+    }
+
+    &--green-tea {
+      background-color: rgba(227, 234, 219, 0.62);
+    }
+
+    &--black-tea {
+      background-color: rgba(230, 230, 230, 0.62);
+    }
+  }
+
+  &__item {
+    flex-basis: 50%;
+    @include text();
+    line-height: 20px;
+  }
+
+  &__extra-order {
+    margin: 15px auto;
+    width: 90%;
+    @include text();
+    text-align: center;
+  }
+
+  &__discount {
+    @include text();
+    text-align: center;
+  }
+}

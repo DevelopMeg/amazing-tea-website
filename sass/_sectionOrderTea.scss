@@ -1,0 +1,81 @@
+/*! SECTION ORDER TEA */
+
+.section-order-tea {
+  border-top: 2px dashed #000;
+  padding-bottom: 20px;
+
+  &__title {
+    margin: 20px 20px 30px 20px;
+    @include titleSection();
+    @include handleTextProperty(500, center);
+  }
+}
+
+.order-online-shop {
+  margin-bottom: 25px;
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 50px;
+    border: 2px solid #000;
+    @include clickItem();
+    line-height: 19px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $darkGray;
+  }
+}
+
+.order-stationary-shop {
+  &__title {
+    margin: 15px;
+    @include subtitle();
+    @include handleTextProperty(600, center);
+    letter-spacing: 1px;
+  }
+}
+
+.contact {
+  border-top: 1px dashed #000;
+  border-bottom: 1px dashed #000;
+  padding: 15px;
+  background-color: #d4e6c2;
+  @include handleFlex(column, space-around, center);
+  width: 100%;
+
+  &__box-items {
+    @include handleFlex(column, space-around, center);
+    @include handleSize(100%, 28vh);
+  }
+
+  &__item {
+    width: 80%;
+    padding: 5px;
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-right: 35px;
+    width: 3vw;
+    font-size: 1.8rem;
+  }
+
+  &__info-text {
+    display: inline-block;
+    @include text();
+  }
+}
+
+.city-map {
+  margin: 20px auto 5px auto;
+  @include handlePositionLeft(relative, 0, 0);
+  @include handleSize(85%, 30vh);
+
+  &__image {
+    display: block;
+    @include handleCenteringItems();
+    @include handleSize(95%, 28vh);
+    box-shadow: 0 2px 10px 0 #000;
+  }
+}

@@ -1,0 +1,64 @@
+/*! SECTION ABOUT US */
+.section-about-us {
+  padding-bottom: 25px;
+
+  &__title {
+    padding: 20px;
+    @include titleSection();
+    @include handleTextProperty(500, center);
+  }
+
+  &__image-mobile {
+    display: block;
+    width: $widthItemsSection;
+    margin: 0 auto;
+  }
+
+  &__image-desktop {
+    display: none;
+  }
+
+  &__text {
+    margin: $marginItemsSection;
+    width: $widthItemsSection;
+    @include text();
+    line-height: 26px;
+    text-align: justify;
+  }
+
+  &__image-text {
+    display: block;
+    margin: $marginItemsSection;
+    width: $widthItemsSection;
+  }
+}
+
+.photo-gallery {
+  margin: 20px;
+
+  &__image {
+    display: block;
+    margin: $marginItemsSection;
+    width: 98%;
+    &--vertical {
+      display: none;
+    }
+  }
+}
+
+.about-us-video {
+  &__title {
+    width: 95%;
+    @include subtitle();
+    line-height: 20px;
+    @include handleTextProperty(600, center);
+    margin: $marginItemsSection;
+  }
+
+  &__src {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #000;
+    width: 90%;
+  }
+}
