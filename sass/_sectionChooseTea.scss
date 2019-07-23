@@ -66,3 +66,117 @@
     }
   }
 }
+
+// @MEDIA
+
+// mobile
+
+@media (min-width: 360px) {
+  .select-tea {
+    @include handleSize(85%, 42vh);
+  }
+}
+
+@media (min-width: 480px) {
+  .section-choose-tea {
+    &__title {
+      margin: 20px;
+      letter-spacing: 1px;
+    }
+  }
+  .select-tea {
+    @include handleSize(75%, 40vh);
+  }
+}
+
+@media (min-width: 720px) {
+  .section-choose-tea {
+    &__title {
+      margin: 30px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .select-tea {
+    @include handleSize(70%, 32vh);
+    &__item {
+      flex-basis: 38%;
+    }
+  }
+}
+
+// landscape
+
+@media (min-width: 480px) and (orientation: landscape) {
+  .select-tea {
+    height: 73vh;
+    &__item {
+      flex-basis: 40%;
+    }
+  }
+}
+
+@media (min-width: 800px) and (orientation: landscape) {
+  .select-tea {
+    @include handleSize(62%, 76vh);
+    &__item {
+      flex-basis: 38%;
+    }
+    &__leaf {
+      padding-top: 10px;
+    }
+  }
+}
+
+// tablet/desktop
+
+@media (min-width: 1024px) {
+  .section-choose-tea {
+    &__title {
+      margin: 38px;
+    }
+  }
+
+  .select-tea {
+    @include handleSize(80%, 20vh);
+    margin: 40px auto 30px auto;
+    &__item {
+      flex-basis: 18%;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  /* change color span title after mouseover on tea box */
+  .section-choose-tea {
+    &__title {
+      &--span {
+        transform: scale(1.1);
+        &.on-black {
+          background-color: #d1d1d1bf;
+        }
+        &.on-green {
+          background-color: #dbe6d0;
+        }
+        &.on-red {
+          background-color: #ecd8d3;
+        }
+        &.on-white {
+          background-color: #f1eec6;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .select-tea {
+    @include handleSize(75%, 18vh);
+    &__item {
+      flex-basis: 17%;
+    }
+  }
+}

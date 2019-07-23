@@ -136,3 +136,317 @@
     text-align: center;
   }
 }
+
+// @MEDIA
+
+// mobile
+
+@media (min-width: 360px) {
+  .head-logo {
+    height: 9vh;
+    &__title {
+      flex-basis: 68%;
+      font-size: 2.2rem;
+    }
+  }
+
+  .head-menu {
+    top: 9vh;
+  }
+
+  .box-logo-image {
+    margin-left: 20px;
+    &__src {
+      width: 28px;
+    }
+  }
+
+  .head-burger-menu {
+    height: 9vh;
+    &__icon {
+      font-size: 3.3rem;
+    }
+  }
+
+  .navbar {
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+
+  .main-sentence {
+    &__title {
+      line-height: 38px;
+      @include handleFontSpacing(2.8rem, 1px);
+      &--span {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .main-citation {
+    &__text {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .head-logo {
+    &__title {
+      flex-basis: 65%;
+      @include handleFontSpacing(2.4rem, 1px);
+    }
+  }
+
+  .box-logo-image {
+    margin-left: 25px;
+  }
+
+  .navbar {
+    &__link {
+      @include handleFontSpacing(1.7rem, 1px);
+    }
+  }
+
+  .main-sentence {
+    &__title {
+      width: 60%;
+      line-height: 40px;
+    }
+  }
+
+  .main-image {
+    &__src {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .head-logo {
+    height: 7vh;
+
+    &__title {
+      flex-basis: 55%;
+      font-size: 2.6rem;
+    }
+  }
+
+  .head-burger-menu {
+    height: 7vh;
+    &__icon {
+      font-size: 3.5rem;
+    }
+  }
+
+  .head-menu {
+    top: 7vh;
+  }
+
+  .main-sentence {
+    &__title {
+      width: 48%;
+      font-size: 3.2rem;
+      line-height: 48px;
+      &--span {
+        font-size: 3.6rem;
+      }
+    }
+  }
+
+  .main-citation {
+    &__text {
+      font-size: 3rem;
+    }
+  }
+
+  .navbar {
+    &__item {
+      height: 6vh;
+    }
+    &__link {
+      font-size: 1.8rem;
+    }
+  }
+
+  .main-image {
+    &__src {
+      @include handleSize(65%, 28vh);
+    }
+  }
+}
+
+// landscape
+
+@media (min-width: 480px) and (orientation: landscape) {
+  .head-logo {
+    height: 15vh;
+  }
+
+  .head-burger-menu {
+    height: 15vh;
+  }
+
+  .head-menu {
+    top: 16vh;
+  }
+
+  .navbar {
+    &__item {
+      height: 14vh;
+    }
+  }
+
+  .main-sentence {
+    flex-basis: 25vh;
+    margin-top: 10px;
+    &__title {
+      width: 90%;
+      font-size: 2.5rem;
+      line-height: 30px;
+      &--span {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .main-image {
+    &__src {
+      @include handleSize(38%, 35vh);
+    }
+  }
+
+  .main-citation {
+    &__text {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+// tablet /desktop
+
+@media (min-width: 1024px) {
+  .head-logo {
+    border-width: 1px;
+    @include handleSize(40%, 8vh);
+    &__title {
+      flex-basis: 60%;
+      font-size: 2.5rem;
+    }
+  }
+
+  .head-burger-menu {
+    display: none;
+    top: -10vh;
+  }
+
+  .box-logo-image {
+    &__src {
+      width: 32px;
+    }
+  }
+
+  .head-menu {
+    z-index: 1;
+    top: 0;
+    @include handleSize(60%, 8vh);
+    background-color: $delicateMint;
+    opacity: 1;
+  }
+
+  .navbar {
+    margin: 0;
+    width: 100%;
+    @include handleFlexShort(row);
+
+    &__item {
+      height: 8vh;
+      border-width: 1px;
+      cursor: pointer;
+
+      &--choose-tea {
+        border-left: none;
+        border-right-style: dashed;
+      }
+
+      &--order-tea {
+        border-left-style: dashed;
+      }
+    }
+
+    &__link {
+      transition: 0.8s;
+    }
+
+    &__item:hover &__link {
+      text-shadow: 0px 2px 4px #68a039, 2px 0px 5px #778029;
+    }
+  }
+
+  .main-sentence {
+    &__title {
+      width: 33%;
+      line-height: 40px;
+      @include handleFontSpacing(2.9rem, 2px);
+      &--span {
+        font-size: 3.4rem;
+      }
+    }
+  }
+
+  .main-image {
+    &__src {
+      @include handleSize(35%, 32vh);
+    }
+  }
+
+  .main-citation {
+    &__text {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .head {
+    @include maxWidth();
+  }
+
+  .head-logo {
+    &__title {
+      flex-basis: 55%;
+      @include handleFontSpacing(2.7rem, 2px);
+    }
+  }
+
+  .box-logo-image {
+    &__src {
+      width: 34px;
+    }
+  }
+
+  .navbar {
+    &__link {
+      @include handleFontSpacing(2rem, 2px);
+    }
+  }
+
+  .main-sentence {
+    &__title {
+      width: 30%;
+      font-size: 3.1rem;
+      line-height: 45px;
+      &--span {
+        padding: 4px;
+        font-size: 3.7rem;
+      }
+    }
+  }
+
+  .main-citation {
+    &__text {
+      font-size: 3rem;
+    }
+  }
+}

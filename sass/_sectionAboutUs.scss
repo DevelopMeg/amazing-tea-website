@@ -62,3 +62,306 @@
     width: 90%;
   }
 }
+
+// @MEDIA
+
+// mobile
+
+@media (min-width: 360px) {
+  .section-about-us {
+    &__text {
+      width: 80%;
+      line-height: 30px;
+    }
+
+    &__image-text {
+      width: 80%;
+    }
+  }
+
+  .photo-gallery {
+    &__image {
+      width: 95%;
+    }
+  }
+
+  .about-us-video {
+    &__title {
+      width: 74%;
+      line-height: 24px;
+    }
+
+    &__src {
+      width: 85%;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .section-about-us {
+    padding-bottom: 30px;
+
+    &__title {
+      padding: 25px;
+    }
+
+    &__text {
+      width: 70%;
+      line-height: 32px;
+    }
+
+    &__image-text {
+      width: 70%;
+      line-height: 34px;
+    }
+
+    &__image-mobile {
+      width: 72%;
+    }
+  }
+
+  .photo-gallery {
+    margin-bottom: 30px;
+    &__image {
+      width: 80%;
+    }
+  }
+
+  .about-us-video {
+    &__src {
+      width: 75%;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .section-about-us {
+    &__text {
+      width: 67%;
+      line-height: 36px;
+    }
+
+    &__image-mobile {
+      width: 65%;
+    }
+
+    &__image-text {
+      margin: 30px auto;
+      width: 65%;
+    }
+  }
+
+  .photo-gallery {
+    &__image {
+      width: 70%;
+    }
+  }
+
+  .about-us-video {
+    &__title {
+      width: 72%;
+    }
+
+    &__src {
+      width: 65%;
+    }
+  }
+}
+
+// landscape
+
+@media (min-width: 480px) and (orientation: landscape) {
+  .section-about-us {
+    &__text {
+      width: 78%;
+      line-height: 28px;
+    }
+
+    &__image-mobile {
+      width: 65%;
+    }
+
+    &__image-text {
+      width: 70%;
+    }
+  }
+
+  .photo-gallery {
+    &__image {
+      width: 65%;
+    }
+  }
+
+  .about-us-video {
+    &__src {
+      width: 60%;
+    }
+  }
+}
+
+@media (min-width: 700px) and (orientation: landscape) {
+  .section-about-us {
+    &__image-text {
+      width: 60%;
+    }
+
+    &__image-mobile {
+      width: 55%;
+    }
+
+    &__text {
+      width: 66%;
+      line-height: 30px;
+    }
+  }
+
+  .photo-gallery {
+    &__image {
+      width: 55%;
+    }
+  }
+
+  .about-us-video {
+    &__src {
+      width: 55%;
+    }
+  }
+}
+
+// tablet/desktop
+
+@media (min-width: 1024px) {
+  .section-about-us {
+    &__title {
+      padding-top: 30px;
+      padding-bottom: 0;
+    }
+
+    &__text {
+      width: 65%;
+      line-height: 34px;
+    }
+
+    &__image-text {
+      margin: 35px auto;
+      @include handleSize(55%, 16vh);
+      box-shadow: 0 0 6px 1px #000;
+    }
+
+    &__image-mobile {
+      display: none;
+    }
+  }
+
+  .photo-gallery {
+    @include handleFlex(row, space-between, space-around);
+    flex-wrap: wrap;
+    margin: 40px auto;
+    @include handleSize(75%, 52vh);
+
+    &__box {
+      flex-basis: 23%;
+
+      &--double-image {
+        @include handleFlex(column, space-around, center);
+      }
+    }
+
+    &__image {
+      margin: 0;
+      width: 80%;
+      box-shadow: 1px 0 5px 1px #000;
+
+      &--double {
+        margin: 0 auto;
+        width: 90%;
+      }
+
+      &--vertical {
+        display: block;
+        margin-top: 0;
+        width: 100%;
+      }
+
+      &--bottom {
+        margin: 0;
+        width: 100%;
+      }
+
+      &--double-two {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .about-us-video {
+    &__title {
+      margin: 25px auto;
+    }
+
+    &__src {
+      width: 45%;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-about-us {
+    &__text {
+      width: 60%;
+    }
+
+    &__image-text {
+      width: 48%;
+    }
+  }
+
+  .photo-gallery {
+    margin: 48px auto;
+    height: 68vh;
+  }
+
+  .section-about-us {
+    &__src {
+      width: 40%;
+    }
+  }
+
+  .about-us-video {
+    &__src {
+      width: 40%;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-about-us {
+    &__text {
+      margin: 25px auto;
+      width: 63%;
+      line-height: 38px;
+    }
+  }
+
+  .photo-gallery {
+    @include handleSize(70%, 56vh);
+
+    &__image {
+      &--double {
+        width: 88%;
+      }
+    }
+  }
+
+  .about-us-video {
+    &__src {
+      width: 35%;
+    }
+  }
+}

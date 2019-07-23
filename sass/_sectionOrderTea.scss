@@ -79,3 +79,239 @@
     box-shadow: 0 2px 10px 0 #000;
   }
 }
+
+// @MEDIA
+
+// mobile
+
+@media (min-width: 480px) {
+  .contact {
+    &__box-items {
+      margin: 10px;
+      @include handleSize(85%, 22vh);
+    }
+
+    &__icon {
+      margin-right: 40px;
+      font-size: 2.2rem;
+    }
+  }
+
+  .section-order-tea {
+    &__title {
+      letter-spacing: 1px;
+    }
+  }
+
+  .order-online-shop {
+    &__btn {
+      padding: 12px 70px;
+    }
+  }
+
+  .order-stationary-shop {
+    &__title {
+      margin: 20px;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .contact {
+    &__box-items {
+      margin: 15px;
+      height: 16vh;
+    }
+
+    &__item {
+      width: 65%;
+    }
+
+    &__icon {
+      margin-right: 50px;
+      font-size: 2.3rem;
+    }
+  }
+
+  .section-order-tea {
+    &__title {
+      margin: 25px;
+    }
+  }
+
+  .order-stationary-shop {
+    &__title {
+      margin: 25px;
+    }
+  }
+
+  .city-map {
+    margin: 30px auto;
+    @include handleSize(70%, 22vh);
+
+    &__image {
+      @include handleSize(80%, 20vh);
+    }
+  }
+}
+
+// landscape
+
+@media (min-width: 480px) and (orientation: landscape) {
+  .contact {
+    &__box-items {
+      @include handleSize(75%, 45vh);
+    }
+  }
+
+  .section-order-tea {
+    &__title {
+      margin: 25px;
+    }
+  }
+
+  .city-map {
+    height: 55vh;
+    &__image {
+      @include handleSize(70%, 50vh);
+    }
+  }
+}
+
+@media (min-width: 800px) and (orientation: landscape) {
+  .contact {
+    &__box-items {
+      height: 35vh;
+    }
+  }
+
+  .city-map {
+    margin: 15px auto;
+  }
+}
+
+// tablet/desktop
+
+@media (min-width: 1024px) {
+  .section-order-tea {
+    &__title {
+      margin-top: 30px;
+    }
+  }
+
+  .contact {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    height: 35vh;
+
+    &__box-items {
+      flex-basis: 45%;
+      height: 25vh;
+    }
+
+    &__item {
+      width: 70%;
+    }
+
+    &__icon {
+      font-size: 2.5rem;
+    }
+  }
+
+  .order-stationary-shop {
+    margin-bottom: 30px;
+    &__title {
+      flex-basis: 100%;
+    }
+  }
+
+  .order-online-shop {
+    margin: 38px;
+    &__btn {
+      padding: 16px 100px;
+      @include handlePositionLeft(relative, 0, 0);
+      line-height: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      overflow: hidden;
+
+      &::after {
+        font-family: "Font Awesome\ 5 Free";
+        content: "\f07a";
+        @include handlePositionLeft(absolute, 90px, 50%);
+        transform: translate(-50%, -50%);
+        font-size: 2.5rem;
+        transition: 0.5s;
+      }
+
+      &:hover::after {
+        top: 50%;
+      }
+    }
+
+    &__btn-text {
+      @include handlePositionLeft(relative, 0, 0);
+      transition: 0.5s;
+    }
+
+    &__btn:hover &__btn-text {
+      top: -100px;
+    }
+  }
+
+  .city-map {
+    flex-basis: 45%;
+    margin: 0;
+    &__image {
+      @include handleSize(75%, 28vh);
+      transition: 0.4s;
+
+      &:hover {
+        box-shadow: 0 2px 10px 5px #2c4612;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    &__box-items {
+      flex-basis: 40%;
+    }
+  }
+
+  .city-map {
+    flex-basis: 40%;
+    &__image {
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-order-tea {
+    @include maxWidth();
+  }
+
+  .order-online-shop {
+    &__btn {
+      padding: 16px 110px;
+    }
+  }
+
+  .contact {
+    border: 1px dashed #000;
+    &__box-items {
+      flex-basis: 35%;
+      height: 22vh;
+    }
+  }
+
+  .city-map {
+    flex-basis: 35%;
+    &__image {
+      height: 25vh;
+    }
+  }
+}
