@@ -8,7 +8,7 @@
   }
 
   &__title {
-    margin: 25px 20px 20px 20px;
+    padding: 25px 20px 20px 20px;
     @include titleSection();
     @include handleTextProperty(500, center);
     letter-spacing: 1px;
@@ -288,7 +288,8 @@
 @media (min-width: 720px) {
   .box-choose-tea {
     &__title {
-      margin: 30px auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
       letter-spacing: 2px;
     }
   }
@@ -466,7 +467,8 @@
     &__title {
       order: 1;
       flex-basis: 100%;
-      margin: 35px 0 20px 0;
+      padding-top: 35px;
+      padding-bottom: 20px;
     }
   }
 
