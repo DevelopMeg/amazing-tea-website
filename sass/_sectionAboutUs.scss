@@ -254,43 +254,84 @@
   }
 
   .photo-gallery {
-    @include handleFlex(row, space-between, space-around);
-    flex-wrap: wrap;
-    margin: 40px auto;
-    @include handleSize(75%, 52vh);
+    display: grid;
+    @include handleSize(68%, 46vh);
+    margin: 20px auto 50px auto;
+    padding-right: 30px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33% 33% 33%;
+    gap: 12px 14px;
 
-    &__box {
-      flex-basis: 23%;
-
-      &--double-image {
-        @include handleFlex(column, space-around, center);
-      }
+    &__image--one {
+      display: block;
+      grid-column: 1/2;
+      grid-row: 1/3;
+      @include handleSize(100%, 100%);
+      margin: 0;
     }
 
-    &__image {
+    &__image--two {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      @include handleSize(100%, 100%);
       margin: 0;
-      width: 80%;
-      box-shadow: 1px 0 5px 1px #000;
+    }
 
-      &--double {
-        margin: 0 auto;
-        width: 90%;
-      }
+    &__image--three {
+      display: block;
+      grid-column: 3/4;
+      grid-row: 1/3;
+      @include handleSize(100%, 100%);
+      margin: 0;
+    }
 
-      &--vertical {
-        display: block;
-        margin-top: 0;
-        width: 100%;
-      }
+    &__image--four {
+      grid-column: 4/5;
+      grid-row: 1/2;
+      @include handleSize(100%, 100%);
+      margin: 0;
+    }
 
-      &--bottom {
-        margin: 0;
-        width: 100%;
-      }
+    &__image--five {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      @include handleSize(100%, 100%);
+      margin: 0;
+    }
 
-      &--double-two {
-        margin-bottom: 25px;
-      }
+    &__image--six {
+      grid-column: 4/5;
+      grid-row: 2/3;
+      @include handleSize(100%, 100%);
+      margin: 0;
+    }
+
+    &__image--seven {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      @include handleSize(100%, 100%);
+      margin: 0;
+    }
+
+    &__image--eight {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      @include handleSize(100%, 100%);
+      margin: 0;
+    }
+
+    &__image--nine {
+      grid-column: 3/4;
+      grid-row: 3/4;
+      @include handleSize(100%, 100%);
+      margin: 0;
+    }
+
+    &__image--ten {
+      grid-column: 4/5;
+      grid-row: 3/4;
+      @include handleSize(100%, 100%);
+      margin: 0;
     }
   }
 
@@ -323,8 +364,7 @@
   }
 
   .photo-gallery {
-    margin: 48px auto;
-    height: 68vh;
+    @include handleSize(60%, 54vh);
   }
 
   .section-about-us {
@@ -350,13 +390,9 @@
   }
 
   .photo-gallery {
+    margin: 30px auto 55px auto;
     @include handleSize(70%, 56vh);
-
-    &__image {
-      &--double {
-        width: 88%;
-      }
-    }
+    row-gap: 14px;
   }
 
   .about-us-video {
