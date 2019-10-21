@@ -49,13 +49,12 @@
 
 .head-menu {
   @include handlePositionRight(fixed, 10vh, 0);
+  z-index: 1;
   width: 100%;
   opacity: 0;
-  transition: 0.2s;
+  transition: opacity 0.2s;
 
   &.on {
-    /*! leave nav/menu */
-    z-index: 1;
     opacity: 1;
   }
 }
@@ -348,7 +347,6 @@
   }
 
   .head-menu {
-    z-index: 1;
     top: 0;
     @include handleSize(60%, 8vh);
     background-color: $delicateMint;
@@ -373,14 +371,6 @@
       &--order-tea {
         border-left-style: dashed;
       }
-    }
-
-    &__link {
-      transition: 0.8s;
-    }
-
-    &__item:hover &__link {
-      text-shadow: 0px 2px 4px #68a039, 2px 0px 5px #778029;
     }
   }
 

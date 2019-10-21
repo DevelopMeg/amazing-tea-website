@@ -531,7 +531,6 @@
       @include handlePositionRight(absolute, 0, 0);
       height: 100%;
       cursor: pointer;
-      transition: 0.8s;
 
       &.animate {
         animation: shake 1.5s linear;
@@ -575,12 +574,15 @@
     &__arrow {
       margin: 12px 8px;
       font-size: 1.9rem;
-      transition: 0.5s;
+      transition: transform 0.5s;
     }
 
-    &__title:hover &__arrow {
-      transform: scale(1.2);
-      margin: 18px 8px;
+    &__title:hover &__arrow--top {
+      transform: scale(1.2) translateY(-35%);
+    }
+
+    &__title:hover &__arrow--bottom {
+      transform: scale(1.2) translateY(35%);
     }
 
     &__title--black-tea:hover &__arrow {
@@ -603,7 +605,6 @@
   .price-list {
     order: 1;
     display: none;
-    transition: 0.1s;
 
     &.on {
       @include handleFlexShort(column);
@@ -643,7 +644,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        transition: 0.3s;
+        transition: top 0.3s, left 0.3s, right 0.3s, bottom 0.3s;
       }
 
       &--black-tea::after {
@@ -695,39 +696,54 @@
     height: 9vh;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
 
+    &::before,
     &::after {
       content: "";
-      display: none;
-      padding: 50px 0;
+      display: block;
       width: 100%;
-      @include handleCenteringItems();
       opacity: 0;
+      z-index: 1;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    &::after {
+      @include handleCenteringItems();
       font-family: $fontMainTitle;
-      background-color: $delicateMint;
       font-weight: bold;
       line-height: 24px;
       text-transform: uppercase;
       @include handleFontSpacing(1.9rem, 1px);
     }
 
-    &--black-tea::after {
+    &:hover::after,
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &--black-tea::before {
       background-color: rgb(220, 213, 213);
     }
 
-    &--green-tea::after {
+    &--green-tea::before {
       background-color: rgb(217, 234, 200);
     }
 
-    &--red-tea::after {
+    &--red-tea::before {
       background-color: rgb(253, 208, 200);
     }
 
-    &--white-tea::after {
+    &--white-tea::before {
       background-color: rgb(251, 223, 155);
     }
-
-    /*! description taste tea */
 
     &--black-tea-one::after,
     &--green-tea-one::after,
@@ -822,15 +838,6 @@
 
     &--white-tea-six::after {
       content: "flower tea";
-    }
-
-    &:hover::after {
-      opacity: 1;
-    }
-
-    &::after {
-      display: block;
-      transition: 0.4s;
     }
   }
 }

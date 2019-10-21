@@ -239,24 +239,26 @@
       &::after {
         font-family: "Font Awesome\ 5 Free";
         content: "\f07a";
-        @include handlePositionLeft(absolute, 90px, 50%);
-        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 40px);
         font-size: 2.5rem;
-        transition: 0.5s;
+        transition: transform 0.5s;
       }
 
       &:hover::after {
-        top: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 
     &__btn-text {
-      @include handlePositionLeft(relative, 0, 0);
-      transition: 0.5s;
+      display: block;
+      transition: transform 0.5s;
     }
 
     &__btn:hover &__btn-text {
-      top: -100px;
+      transform: translateY(-65px);
     }
   }
 
@@ -265,11 +267,6 @@
     margin: 0;
     &__image {
       @include handleSize(75%, 28vh);
-      transition: 0.4s;
-
-      &:hover {
-        box-shadow: 0 2px 10px 5px #2c4612;
-      }
     }
   }
 }

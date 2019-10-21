@@ -6,7 +6,7 @@
     @include titleSection();
     @include handleTextProperty(500, center);
     &--span {
-      transition: 0.8s;
+      transition: background-color 0.8s;
     }
   }
 }
@@ -142,7 +142,7 @@
     margin: 40px auto 30px auto;
     &__item {
       flex-basis: 18%;
-      transition: 0.3s;
+      transition: transform 0.3s;
       cursor: pointer;
       &:hover {
         transform: scale(1.1);
@@ -150,11 +150,9 @@
     }
   }
 
-  /* change color span title after mouseover on tea box */
   .section-choose-tea {
     &__title {
       &--span {
-        transform: scale(1.1);
         &.on-black {
           background-color: #d1d1d1bf;
         }

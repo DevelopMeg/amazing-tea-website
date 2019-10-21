@@ -343,7 +343,7 @@
     &__src {
       width: 45%;
       cursor: pointer;
-      transition: 0.3s;
+      transition: transform 0.3s;
 
       &:hover {
         transform: scale(0.9);
