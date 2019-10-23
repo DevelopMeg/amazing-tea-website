@@ -362,6 +362,33 @@
       height: 8vh;
       border-width: 1px;
       cursor: pointer;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        @include handleSize(1vw, 1vw);
+        border-radius: 40px;
+        opacity: 0;
+        transition: opacity 0.7s ease-in-out;
+        background-color: #f5f9ef;
+      }
+
+      &::after {
+        right: 8%;
+      }
+
+      &::before {
+        left: 8%;
+      }
+
+      &:hover::after,
+      &:hover::before {
+        opacity: 1;
+      }
 
       &--choose-tea {
         border-left: none;

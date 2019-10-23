@@ -54,15 +54,15 @@
     padding-top: 8px;
 
     &--green-tea {
-      color: #335f0d;
+      color: $boxChooseGreen;
     }
 
     &--red-tea {
-      color: #842a0f;
+      color: $boxChooseRed;
     }
 
     &--white-tea {
-      color: #af9d5d;
+      color: $boxChooseGold;
     }
   }
 }
@@ -142,10 +142,35 @@
     margin: 40px auto 30px auto;
     &__item {
       flex-basis: 18%;
-      transition: transform 0.3s;
       cursor: pointer;
-      &:hover {
-        transform: scale(1.1);
+
+      &::after {
+        content: "";
+        @include handlePositionLeft(absolute, 0, 0);
+        @include handleSize(100%, 100%);
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity 1s;
+      }
+
+      &--black-tea::after {
+        box-shadow: 0 0 10px 1px #000;
+      }
+
+      &--green-tea::after {
+        box-shadow: 0 0 10px 1px $boxChooseGreen;
+      }
+
+      &--red-tea::after {
+        box-shadow: 0 0 10px 1px $boxChooseRed;
+      }
+
+      &--white-tea::after {
+        box-shadow: 0 0 10px 1px $boxChooseGold;
+      }
+
+      &:hover::after {
+        opacity: 1;
       }
     }
   }
