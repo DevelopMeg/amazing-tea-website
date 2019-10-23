@@ -700,7 +700,6 @@
 
     &::before,
     &::after {
-      content: "";
       display: block;
       width: 100%;
       opacity: 0;
@@ -709,13 +708,13 @@
     }
 
     &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
+      content: "";
+      @include handlePositionLeft(absolute, 0, 0);
       height: 100%;
     }
 
     &::after {
+      content: attr(name-tea);
       @include handleCenteringItems();
       font-family: $fontMainTitle;
       font-weight: bold;
@@ -743,101 +742,6 @@
 
     &--white-tea::before {
       background-color: rgb(251, 223, 155);
-    }
-
-    &--black-tea-one::after,
-    &--green-tea-one::after,
-    &--red-tea-one::after,
-    &--white-tea-one::after {
-      content: "natural tea";
-    }
-
-    /*! black tea */
-
-    &--black-tea-two::after {
-      content: "lemon tea";
-    }
-
-    &--black-tea-three::after {
-      content: "plum tea";
-    }
-
-    &--black-tea-four::after {
-      content: "orange tea";
-    }
-
-    &--black-tea-five::after {
-      content: "kiwi tea";
-    }
-
-    &--black-tea-six::after {
-      content: "winter tea";
-    }
-
-    /*! green tea */
-
-    &--green-tea-two::after {
-      content: "papaya tea";
-    }
-
-    &--green-tea-three::after {
-      content: "peach tea";
-    }
-
-    &--green-tea-four::after {
-      content: "watermelon tea";
-    }
-
-    &--green-tea-five::after {
-      content: "coconut tea";
-    }
-
-    &--green-tea-six::after {
-      content: "rose tea";
-    }
-
-    /*! red tea */
-
-    &--red-tea-two::after {
-      content: "cherry tea";
-    }
-
-    &--red-tea-three::after {
-      content: "apple tea";
-    }
-
-    &--red-tea-four::after {
-      content: "raspberry tea";
-    }
-
-    &--red-tea-five::after {
-      content: "grape tea";
-    }
-
-    &--red-tea-six::after {
-      content: "dragon tea";
-    }
-
-    /*! white tea */
-
-    &--white-tea-two::after {
-      content: "apricot tea";
-    }
-
-    &--white-tea-three::after {
-      content: "strawberry tea";
-    }
-
-    &--white-tea-four::after {
-      content: "pineapple tea";
-    }
-
-    &--white-tea-five::after {
-      content: "muffin tea";
-    }
-
-    &--white-tea-six::after {
-      content: "flower tea";
     }
   }
 }
