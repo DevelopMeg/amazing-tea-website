@@ -68,17 +68,10 @@
 }
 
 .city-map {
+  display: block;
   margin: 20px auto 5px auto;
-  @include handlePositionLeft(relative, 0, 0);
-  @include handleSize(85%, 30vh);
-  background: url("../IMG/imagemap.jpg") no-repeat center/cover;
-  cursor: pointer;
-  border: 2px solid #ececea;
-
-  &__link {
-    display: block;
-    @include handleSize(100%, 100%);
-  }
+  @include handleSize(100%, 40vh);
+  border: none;
 }
 
 // @MEDIA
@@ -117,7 +110,7 @@
   }
 
   .city-map {
-    @include handleSize(70%, 25vh);
+    width: 90%;
   }
 }
 
@@ -152,7 +145,7 @@
 
   .city-map {
     margin: 30px auto;
-    @include handleSize(65%, 20vh);
+    @include handleSize(80%, 30vh);
   }
 }
 
@@ -170,10 +163,6 @@
       margin: 25px;
     }
   }
-
-  .city-map {
-    height: 55vh;
-  }
 }
 
 // tablet/desktop
@@ -189,7 +178,7 @@
     flex-direction: row;
     justify-content: center;
     padding: 0;
-    height: 35vh;
+    height: 40vh;
 
     &__box-items {
       flex-basis: 45%;
@@ -207,6 +196,7 @@
 
   .order-stationary-shop {
     margin-bottom: 30px;
+
     &__title {
       flex-basis: 100%;
     }
@@ -214,6 +204,7 @@
 
   .order-online-shop {
     margin: 38px;
+
     &__btn {
       padding: 16px 100px;
       @include handlePositionLeft(relative, 0, 0);
@@ -247,23 +238,9 @@
   }
 
   .city-map {
-    flex-basis: 38%;
+    flex-basis: 40%;
     margin: 0;
-    height: 26vh;
-
-    &::after {
-      content: "";
-      @include handlePositionLeft(absolute, 0, 0);
-
-      @include handleSize(100%, 100%);
-      box-shadow: 0 0 12px 0 #000;
-      opacity: 0;
-      transition: opacity 1s;
-    }
-
-    &:hover::after {
-      opacity: 1;
-    }
+    height: 35vh;
   }
 }
 
@@ -272,10 +249,6 @@
     &__box-items {
       flex-basis: 38%;
     }
-  }
-
-  .city-map {
-    flex-basis: 28%;
   }
 }
 
@@ -291,8 +264,6 @@
   }
 
   .contact {
-    height: 32vh;
-    border: 1px dashed #000;
     &__box-items {
       flex-basis: 35%;
       height: 22vh;
