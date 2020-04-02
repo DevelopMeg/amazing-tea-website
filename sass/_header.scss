@@ -64,6 +64,7 @@
   list-style: none;
   margin: 4px auto;
   width: 98%;
+  padding-left: 0;
 
   &__item {
     @include handlePositionLeft(relative, 0, 0);
@@ -143,6 +144,7 @@
 @media (min-width: 360px) {
   .head-logo {
     height: 9vh;
+
     &__title {
       flex-basis: 68%;
       font-size: 2.2rem;
@@ -155,6 +157,7 @@
 
   .box-logo-image {
     margin-left: 20px;
+
     &__src {
       width: 28px;
     }
@@ -162,6 +165,7 @@
 
   .head-burger-menu {
     height: 9vh;
+
     &__icon {
       font-size: 3.3rem;
     }
@@ -177,6 +181,7 @@
     &__title {
       line-height: 38px;
       @include handleFontSpacing(2.8rem, 1px);
+
       &--span {
         font-size: 3rem;
       }
@@ -234,6 +239,7 @@
 
   .head-burger-menu {
     height: 7vh;
+
     &__icon {
       font-size: 3.5rem;
     }
@@ -248,6 +254,7 @@
       width: 48%;
       font-size: 3.2rem;
       line-height: 48px;
+
       &--span {
         font-size: 3.6rem;
       }
@@ -264,6 +271,7 @@
     &__item {
       height: 6vh;
     }
+
     &__link {
       font-size: 1.8rem;
     }
@@ -300,10 +308,12 @@
   .main-sentence {
     flex-basis: 25vh;
     margin-top: 10px;
+
     &__title {
       width: 90%;
       font-size: 2.5rem;
       line-height: 30px;
+
       &--span {
         font-size: 2.5rem;
       }
@@ -329,6 +339,7 @@
   .head-logo {
     border-width: 1px;
     @include handleSize(40%, 8vh);
+
     &__title {
       flex-basis: 60%;
       font-size: 2.5rem;
@@ -406,6 +417,7 @@
       width: 33%;
       line-height: 40px;
       @include handleFontSpacing(2.9rem, 2px);
+
       &--span {
         font-size: 3.4rem;
       }
@@ -454,6 +466,7 @@
       width: 30%;
       font-size: 3.1rem;
       line-height: 45px;
+
       &--span {
         padding: 4px;
         font-size: 3.7rem;
