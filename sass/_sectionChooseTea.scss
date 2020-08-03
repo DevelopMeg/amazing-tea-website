@@ -5,6 +5,7 @@
     margin: 15px;
     @include titleSection();
     @include handleTextProperty(500, center);
+
     &--span {
       transition: background-color 0.8s;
     }
@@ -47,6 +48,7 @@
     width: 100%;
     @include clickItem();
     @include handleTextProperty(600, center);
+    margin: 0;
   }
 
   &__leaf {
@@ -84,6 +86,7 @@
       letter-spacing: 1px;
     }
   }
+
   .select-tea {
     @include handleSize(75%, 40vh);
   }
@@ -99,6 +102,7 @@
 
   .select-tea {
     @include handleSize(70%, 32vh);
+
     &__item {
       flex-basis: 38%;
     }
@@ -110,6 +114,7 @@
 @media (min-width: 480px) and (orientation: landscape) {
   .select-tea {
     height: 73vh;
+
     &__item {
       flex-basis: 40%;
     }
@@ -119,9 +124,11 @@
 @media (min-width: 800px) and (orientation: landscape) {
   .select-tea {
     @include handleSize(62%, 76vh);
+
     &__item {
       flex-basis: 38%;
     }
+
     &__leaf {
       padding-top: 10px;
     }
@@ -140,6 +147,7 @@
   .select-tea {
     @include handleSize(80%, 20vh);
     margin: 40px auto 30px auto;
+
     &__item {
       flex-basis: 18%;
       cursor: pointer;
@@ -181,12 +189,15 @@
         &.on-black {
           background-color: #d1d1d1bf;
         }
+
         &.on-green {
           background-color: #dbe6d0;
         }
+
         &.on-red {
           background-color: #ecd8d3;
         }
+
         &.on-white {
           background-color: #f1eec6;
         }
@@ -198,6 +209,7 @@
 @media (min-width: 1440px) {
   .select-tea {
     @include handleSize(75%, 18vh);
+
     &__item {
       flex-basis: 17%;
     }
